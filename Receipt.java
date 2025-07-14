@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 public class Receipt
 {
     String name = "None";
@@ -8,6 +10,13 @@ public class Receipt
     double secondorderprice = 0;
     String drink = "None";
     double drinkprice = 0;
+    
+    //getting current date & time
+    LocalDateTime now = LocalDateTime.now();
+    //formatting
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy hh:mm a");
+    String formattedDateTime = now.format(formatter);
+
     public Receipt(String name, String firstorder, double firstorderprice, String secondorder, double secondorderprice, String drink, double drinkprice){
         this.name = name;
         this.firstorder = firstorder;
@@ -23,6 +32,7 @@ public class Receipt
         System.out.println();
         System.out.print("        215 Blossom Blvd, CA USA");
         System.out.println("\n----------------------------------------");
+        System.out.println("Date: "+formattedDateTime);
         System.out.println(firstorder+":"+"$"+firstorderprice);
         System.out.println(secondorder+":"+"$"+secondorderprice);
         System.out.println(drink+":"+"$"+drinkprice);
@@ -79,7 +89,7 @@ public class Receipt
             String [] menu = {"Miso Udon", "Chicken Katsu Curry", "Tonkotsu Ramen", "Sushi Nigiri", "Beef Sukiyaki"};
             double [] menuPrice = {9.99, 11.99, 12.99, 8.99, 10.99};
             for (int j=0; j < menu.length; j++){
-                System.out.println(menu[j]+":"+"$"+menuPrice[j]);
+                System.out.println(menu[j]+":"+" $"+menuPrice[j]);
             }
             System.out.println("----------------------------------------");
             System.out.println();
@@ -97,7 +107,7 @@ public class Receipt
             String [] drinkity = {"Ume Mocktail", "Strawberry Calpico", "Matcha Latte", "Hojicha Tea", "Water"};
             double [] drinkityPrice = {6.99, 2.99, 4.99, 1.99, 0.00};
             for (int k=0; k < drinkity.length; k++){
-                System.out.println(drinkity[k]+":"+"$"+drinkityPrice[k]);
+                System.out.println(drinkity[k]+":"+" $"+drinkityPrice[k]);
             }
             System.out.println("----------------------------------------");
             Drink = sc.nextLine();
