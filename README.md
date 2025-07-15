@@ -1,6 +1,5 @@
-Japanese Restaurant Simulator Game
----
----
+#Japanese Restaurant Simulator Game
+
 
 Introduction 🍛🍜🍣
 ---------
