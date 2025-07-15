@@ -1,3 +1,7 @@
+Japanese Restaurant Simulator Game
+---
+---
+
 Introduction 🍛🍜🍣
 ---------
 This is a small project made for learning. This is my very first Java project. Please interact with it and enjoy!
